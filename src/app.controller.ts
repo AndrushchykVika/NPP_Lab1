@@ -8,8 +8,27 @@ export class AppController {
     private readonly lab1Service: Lab1AndrushchukService) {}
 
   @Get()
-  getHello(): string {
-    // return this.appService.getHello();
-    return this.lab1Service();
+  getHello(): string{
+    return this.appService.getString();
+  }
+
+  getNumber(): number{
+    return this.appService.getNumber();
+  }
+
+  getArrays(): number[]{
+    return this.appService.getArrays();
+  }
+
+  getEnums():number{
+    return this.appService.getEnums();
+  }
+
+  getMultitypeValues():number|string{
+    return this.appService.getMultitypeValues();
+  }
+
+  getMultitupeArrays(): (number|string)[][]{
+    return this.appService.getMultitypeArrays();
   }
 }
